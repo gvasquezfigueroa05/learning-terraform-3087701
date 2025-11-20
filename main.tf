@@ -77,9 +77,10 @@ listeners = {
   }
 
   tags = {
-    Environment = "Development"
+    Environment = "Dev"
     Project     = "Example"
   }
+ }
 }
 
 
