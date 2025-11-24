@@ -35,8 +35,8 @@ module "blog_vpc" {
 
 module "autoscaling" {
   source  = "terraform-aws-modules/autoscaling/aws"
-  version = "6.5.2"
-
+  version = "6.5.3"
+  
   name = "blog"
   min_size = 1
   max_size = 2
@@ -46,7 +46,7 @@ module "autoscaling" {
   security_groups     = [module.blog_sg.security_group_id]
 
   image_id               = data.aws_ami.app_ami.id
-  instance_type          = var.instance_type
+  instance_type          = var.instance_type 
 }
 
 module "blog_alb" {
